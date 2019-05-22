@@ -1,3 +1,48 @@
+function isImage(link) {
+    const re = /.*(?:jpeg|jpg|png|gif)$/i;
+    return re.test(link);
+}
+
+function tagName(href, type) {
+    if (isImage(href)) {
+        return "img";
+    }
+    return "a";
+}
+
+function target(href, type) {
+    if (type !== "url") {
+        return "";
+    }
+    if (isImage(href)) {
+        return "";
+    }
+    return "_blank";
+}
+
+function formatHref(href, type) {
+    if (isImage(href)) {
+        return "";
+    }
+    return href;
+}
+
+function attributes(href, type) {
+    if (isImage(href)) {
+        return {
+            src: href,
+        };
+    }
+    return null;
+}
+
+function format(href, type) {
+    if (isImage(href)) {
+        return "";
+    }
+    return href;
+}
+
 const config = {
   // Highlight Links
   highlightLinks: true,
@@ -5,10 +50,11 @@ const config = {
   // Linkify Settings
   linkify: {
     className: 'talk-plugin-rich-text-link',
-    tagName: 'a',
-    target: {
-      url: '_blank',
-    },
+    tagName: tagName,
+    target: target,
+    formatHref: formatHref,
+    attributes: attributes,
+    format: format,
   },
 
   // TODO: move to admin eventually
