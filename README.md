@@ -1,14 +1,4 @@
----
-title: talk-plugin-rich-text
-permalink: /plugin/talk-plugin-rich-text/
-layout: plugin
-plugin:
-    name: talk-plugin-rich-text
-    default: true
-    provides:
-        - Client
-        - Server
----
+Quick hack of the rich-text plugin which will render links that look like images as `<img>` rather than `<a>`. Use with caution, obviously.
 
 Enables secure rich text support server-side.
 
