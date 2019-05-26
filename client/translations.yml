@@ -3,18 +3,22 @@ en:
     format_bold: bold
     format_italic: italic
     format_blockquote: blockquote
+    format_strikethrough: strikethrough
 nl_NL:
   talk-plugin-rich-text:
     format_bold: vetgedrukt
     format_italic: cursief
     format_blockquote: blockquote
+    format_strikethrough: strikethrough
 he:
   talk-plugin-rich-text:
     format_bold: מודגש
     format_italic: נטוי
     format_blockquote: blockquote
+    format_strikethrough: strikethrough
 it:
   talk-plugin-rich-text:
     format_bold: bold
     format_italic: italic
     format_blockquote: blockquote
+    format_strikethrough: strikethrough

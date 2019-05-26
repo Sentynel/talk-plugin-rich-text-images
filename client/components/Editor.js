@@ -6,7 +6,7 @@ import { PLUGIN_NAME } from '../constants';
 import { htmlNormalizer } from '../utils';
 import RTE from './rte/RTE';
 import { Icon } from 'plugin-api/beta/client/components/ui';
-import { Bold, Italic, Blockquote } from './rte/features';
+import { Bold, Italic, Blockquote, Strikethrough } from './rte/features';
 import { t } from 'plugin-api/beta/client/services';
 import bowser from 'bowser';
 
@@ -93,6 +93,13 @@ class Editor extends React.Component {
             >
               <Icon className={styles.icon} name="format_italic" />
             </Italic>,
+            <Strikethrough
+              key="strikethrough"
+              title={t('talk-plugin-rich-text.format_strikethrough')}
+              className={`${PLUGIN_NAME}-feature-strikethrough`}
+            >
+              <Icon className={styles.icon} name="format_strikethrough" />
+            </Strikethrough>,
             <Blockquote
               key="blockquote"
               title={t('talk-plugin-rich-text.format_blockquote')}
